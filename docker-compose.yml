@@ -1,0 +1,11 @@
+version: "3"
+services:
+  battle-service:
+    image: aglorei/pokemon_battle_rails
+    ports:
+      - "3000:3000"
+    networks:
+      - pokemon_app_network
+
+networks:
+  pokemon_app_network:
