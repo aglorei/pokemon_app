@@ -1,0 +1,3 @@
+[submodule "pokemon_battle_rails"]
+	path = pokemon_battle_rails
+	url = https://github.com/aglorei/pokemon_battle_rails.git
