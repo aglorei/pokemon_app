@@ -1,11 +1,21 @@
 version: "3"
 services:
-  battle-service:
+  battle_service:
     image: aglorei/pokemon_battle_rails
-    ports:
-      - "3000:3000"
     networks:
       - pokemon_app_network
+    ports:
+      - "3000:3000"
+  reverse_proxy:
+    image: nginx:1.13-alpine
+    networks:
+      - pokemon_app_network
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./reverse_proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - battle_service
 
 networks:
   pokemon_app_network:
