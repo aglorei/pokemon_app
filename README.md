@@ -1,6 +1,8 @@
 # Pokemon App
 This respository couples the Rails server implemented in [Pokemon Battle Rails](https://github.com/aglorei/pokemon_battle_rails/) with a Nginx reverse proxy that implements a [proxy cache](https://www.nginx.com/blog/nginx-caching-guide/) for requests that fetch upstream information from [Pokeapi](https://pokeapi.co/). Since requests from the battle server are passed through the reverse proxy and collected in cache, the strain towards hitting Pokeapi's rate-limiting threshold is eased.
 
+![Diagram](diagram.png)
+
 ## Quick Start
 ### Prerequisites
 - [Docker](https://docs.docker.com/install)
