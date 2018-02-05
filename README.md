@@ -52,3 +52,38 @@ This is a passthrough-endpoint. Please reference the [Pokeapi Documentation](htt
 | --- | --- | --- |
 | `pokemon1` | {id or name} | ID or name of Pokemon assigned as offensive in the first round |
 | `pokemon2` | {id or name} | ID or name of Pokemon assigned as defensive in the first round |
+### Sample Response
+```JSON
+{
+  "winner": "Charmander",
+  "history": [
+    "Pikachu has an hp of 35.0.",
+    "Charmander has an hp of 39.0",
+    "Pikachu attacked Charmander with 'Take-down' for a damage of 9.0.",
+    "Charmander is left with an hp of 30.0.",
+    "Charmander smacked Pikachu with 'Secret-power' for a damage of 7.0.",
+    "Pikachu is left with an hp of 28.0.",
+    "Pikachu slapped Charmander with 'Rollout' for a damage of 3.0.",
+    "Charmander is left with an hp of 27.0.",
+    "Charmander slapped Pikachu with 'Shadow-claw' for a damage of 7.0.",
+    "Pikachu is left with an hp of 21.0.",
+    "Pikachu attacked Charmander with 'Swift' for a damage of 6.0.",
+    "Charmander is left with an hp of 21.0.",
+    "Charmander knocked Pikachu with 'Leer' for a damage of 0.0.",
+    "Pikachu is left with an hp of 21.0.",
+    "Pikachu slapped Charmander with 'Bide' for a damage of 0.0.",
+    "Charmander is left with an hp of 21.0.",
+    "Charmander slapped Pikachu with 'Shadow-claw' for a damage of 7.0.",
+    "Pikachu is left with an hp of 14.0.",
+    "Pikachu attacked Charmander with 'Submission' for a damage of 8.0.",
+    "Charmander is left with an hp of 13.0.",
+    "Charmander attacked Pikachu with 'Headbutt' for a damage of 7.0.",
+    "Pikachu is left with an hp of 7.0.",
+    "Pikachu slapped Charmander with 'Thunderbolt' for a damage of 9.0.",
+    "Charmander is left with an hp of 4.0.",
+    "Charmander attacked Pikachu with 'Rock-slide' for a damage of 7.5.",
+    "Pikachu is left with an hp of 0.0.",
+    "Charmander is the triumphant winner."
+  ]
+}
+```
