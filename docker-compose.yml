@@ -2,6 +2,8 @@ version: "3"
 services:
   battle_service:
     image: aglorei/pokemon_battle_rails
+    environment:
+      POKEAPI_URL: "http://reverse_proxy:8080/api"
     networks:
       - pokemon_app_network
     ports:
