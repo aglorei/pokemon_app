@@ -1,0 +1,32 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: battle-rails-deployment
+  namespace: battle-rails
+  labels:
+    app: battle-rails
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: battle-rails
+  template:
+    metadata:
+      labels:
+        app: battle-rails
+    spec:
+      containers:
+      - name: battle-rails
+        image: aglorei/pokemon_battle_rails
+        env:
+        - name: POKEAPI_URL
+          value: "http://reverse_proxy:8080/api"
+        ports:
+        - containerPort: 3000
+        readinessProbe:
+          httpGet:
+            path: /healthcheck
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          timeoutSeconds: 5
