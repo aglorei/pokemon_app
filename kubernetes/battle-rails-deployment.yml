@@ -6,7 +6,7 @@ metadata:
   labels:
     app: battle-rails
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: battle-rails
@@ -20,7 +20,7 @@ spec:
         image: aglorei/pokemon_battle_rails
         env:
         - name: POKEAPI_URL
-          value: "http://reverse_proxy:8080/api"
+          value: "http://reverse-proxy-service:8080/api"
         ports:
         - containerPort: 3000
         readinessProbe:
