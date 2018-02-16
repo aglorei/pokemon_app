@@ -8,7 +8,7 @@ metadata:
 data:
   nginx.conf: |
     user              nginx;
-    worker_processes  1;
+    worker_processes  auto;
 
     error_log  stderr info;
     pid        /var/run/nginx.pid;
